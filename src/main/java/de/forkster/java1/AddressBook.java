@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class AddressBook {
-    private ArrayList<Person> Entries;
+    private ArrayList<Person> Entries = new ArrayList<Person>();
 
 
     public void addEntry(Person Entry) {
