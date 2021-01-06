@@ -52,9 +52,13 @@ public class AddressBookTest {
         addressBook.addEntry(person5);
 
         // When
-        // addressBook.getEntries().sort(<Person>);
+        addressBook.sortByName();
 
-
-
+        // Then
+        assertEquals("Frischmuth",  addressBook.getEntries().get(0).getLastname(), "The first person should be Frischmuth");
+        assertEquals("Gabel",       addressBook.getEntries().get(1).getLastname(), "The first person should be Gabel");
+        assertEquals("Hofmann",     addressBook.getEntries().get(2).getLastname(), "The first person should be Hofmann");
+        assertEquals("Knop",        addressBook.getEntries().get(3).getLastname(), "The first person should be Knop");
+        assertEquals("Wohlers",     addressBook.getEntries().get(4).getLastname(), "The first person should be Wohlers");
     }
 }

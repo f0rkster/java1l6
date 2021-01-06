@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.forkster.java1</groupId>
-    <artifactId>java1l4</artifactId>
+    <artifactId>java1l6</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <dependencies>
         <dependency>

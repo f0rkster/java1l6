@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class AddressBook {
+public class AddressBook{
     private ArrayList<Person> Entries = new ArrayList<Person>();
 
 
@@ -12,6 +12,11 @@ public class AddressBook {
         this.getEntries().add(Entry);
     }
 
+
+    public void sortByName() {
+        ArrayList<Person> listPerson = this.getEntries();
+        Collections.sort(listPerson);
+    }
 
     //Getter & Setter
     public ArrayList<Person> getEntries() {
@@ -21,4 +26,5 @@ public class AddressBook {
     public void setEntries(ArrayList<Person> entries) {
         this.Entries = entries;
     }
+
 }

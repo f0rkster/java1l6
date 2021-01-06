@@ -1,6 +1,6 @@
 package de.forkster.java1;
 
-public class Person {
+public class Person  implements Comparable<Person> {
     private String firstname;
     private String lastname;
     private String email;
@@ -9,6 +9,11 @@ public class Person {
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return this.lastname.compareTo(o.getLastname()); // dog name sort in ascending order
     }
 
     //Getter & Setter
