@@ -14,6 +14,8 @@ public class AddressBookTest {
     Person      person3     = new Person("Christoph", "Frischmuth", "christoph.frischmuth@fh-email.de");
     Person      person4     = new Person("Mickey", "Knop", "mickey.knop@fh-email.de");
     Person      person5     = new Person("Saskia", "Wohlers", "saskia.wohlers@fh-email.de");
+    Person      person6     = new Person("Stefan", "Gabel", "stefan.gabel@fh-erfurt.de");
+    Person      person7     = new Person("Marion", "Gabel", "marion.gabel@fh-ermail.de");
 
     @BeforeEach
     public void setUp()
@@ -60,5 +62,24 @@ public class AddressBookTest {
         assertEquals("Hofmann",     addressBook.getEntries().get(2).getLastname(), "The first person should be Hofmann");
         assertEquals("Knop",        addressBook.getEntries().get(3).getLastname(), "The first person should be Knop");
         assertEquals("Wohlers",     addressBook.getEntries().get(4).getLastname(), "The first person should be Wohlers");
+    }
+
+    @Test
+    public void should_count_gabel_equals_3()
+    {
+        // Given
+        addressBook.addEntry(person1);
+        addressBook.addEntry(person2);
+        addressBook.addEntry(person3);
+        addressBook.addEntry(person4);
+        addressBook.addEntry(person5);
+        addressBook.addEntry(person6);
+        addressBook.addEntry(person7);
+
+        // When
+        String result = addressBook.overview();
+
+        // Then
+        assertEquals("Gabel - 3, Hofmann - 1, Frischmuth - 1, Knop - 1, Wohlers - 1", result);
     }
 }

@@ -13,7 +13,7 @@ public class Person  implements Comparable<Person> {
 
     @Override
     public int compareTo(Person o) {
-        return this.lastname.compareTo(o.getLastname()); // dog name sort in ascending order
+        return this.lastname.compareTo(o.getLastname());
     }
 
     //Getter & Setter
